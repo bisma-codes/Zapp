@@ -14,12 +14,13 @@ import {
 } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import { FormEvent, useState } from "react";
+import { assetPath } from "@/lib/basePath";
 import styles from "./ContactPage.module.css";
 
 function Brand() {
   return (
     <span className={styles.brand}>
-      <Image src="/zapp-logo.png" alt="" width={34} height={40} priority />
+      <Image src={assetPath("/zapp-logo.png")} alt="" width={34} height={40} priority />
       ZAPP
     </span>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowRight,
   BatteryCharging,
@@ -22,6 +23,7 @@ import {
 } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import { useState } from "react";
+import { assetPath } from "@/lib/basePath";
 import styles from "./ProductSite.module.css";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -30,7 +32,7 @@ function Logo() {
   return (
     <span className={styles.logo}>
       <i className={styles.logoMark}>
-        <Image src="/zapp-logo.png" alt="" width={30} height={34} priority />
+        <Image src={assetPath("/zapp-logo.png")} alt="" width={30} height={34} priority />
       </i>
       ZAPP
     </span>
@@ -94,7 +96,7 @@ export function ProductSite() {
         </nav>
         <a
           className={styles.headerCta}
-          href="/zapp-demo.apk"
+          href={assetPath("/zapp-demo.apk")}
           download="ZAPP-Demo.apk"
         >
           Download demo <ArrowRight size={15} />
@@ -144,7 +146,7 @@ export function ProductSite() {
           >
             <a
               className={styles.primaryButton}
-              href="/zapp-demo.apk"
+              href={assetPath("/zapp-demo.apk")}
               download="ZAPP-Demo.apk"
             >
               Download the demo <ArrowRight size={17} />
@@ -162,7 +164,7 @@ export function ProductSite() {
           <div className={styles.orbitOne} />
           <div className={styles.orbitTwo} />
           <Phone
-            src="/zapp-dashboard.png"
+            src={assetPath("/zapp-dashboard.png")}
             alt="ZAPP monthly energy dashboard"
             className={styles.heroPhone}
             priority
@@ -300,7 +302,7 @@ export function ProductSite() {
               <p>A practical schedule built around your target, appliance load and energy source.</p>
               <div className={styles.miniBenefit}><BellRing /> Swipe tasks done. See your progress move.</div>
             </div>
-            <Phone src="/zapp-plan.png" alt="ZAPP daily appliance plan" />
+            <Phone src={assetPath("/zapp-plan.png")} alt="ZAPP daily appliance plan" />
           </Reveal>
 
           <Reveal className={`${styles.showcase} ${styles.solarShowcase}`}>
@@ -348,7 +350,7 @@ export function ProductSite() {
           <p>Try ZAPP on Android today.</p>
           <a
             className={styles.downloadButton}
-            href="/zapp-demo.apk"
+            href={assetPath("/zapp-demo.apk")}
             download="ZAPP-Demo.apk"
           >
             Download the demo <ArrowRight size={17} />
@@ -361,8 +363,8 @@ export function ProductSite() {
         <Logo />
         <span>Smarter energy. Lighter bills.</span>
         <div>
-          <a href="/team">Team</a>
-          <a href="/contact">Contact</a>
+          <Link href="/team">Team</Link>
+          <Link href="/contact">Contact</Link>
           <a href="mailto:privacy@zapp.energy">Privacy</a>
         </div>
         <small>© 2026 ZAPP Energy Ecosystem</small>

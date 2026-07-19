@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { assetPath } from "@/lib/basePath";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://zapp.energy"),
+  metadataBase: new URL("https://bisma-codes.github.io/Zapp/"),
   title: {
     default: "ZAPP — Plan Electricity Before You Pay For It",
     template: "%s | ZAPP",
@@ -46,8 +47,8 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/zapp-logo.png",
-    apple: "/zapp-logo.png",
+    icon: assetPath("/zapp-logo.png"),
+    apple: assetPath("/zapp-logo.png"),
   },
 };
 
