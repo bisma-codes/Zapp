@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import { useState } from "react";
-import { assetPath } from "@/lib/basePath";
+import { DEMO_APK_URL, assetPath } from "@/lib/basePath";
 import styles from "./ProductSite.module.css";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -96,8 +96,8 @@ export function ProductSite() {
         </nav>
         <a
           className={styles.headerCta}
-          href={assetPath("/zapp-demo.apk")}
-          download="ZAPP-Demo.apk"
+          href={DEMO_APK_URL}
+          download="ZappApp-v1.0.apk"
         >
           Download demo <ArrowRight size={15} />
         </a>
@@ -146,8 +146,8 @@ export function ProductSite() {
           >
             <a
               className={styles.primaryButton}
-              href={assetPath("/zapp-demo.apk")}
-              download="ZAPP-Demo.apk"
+              href={DEMO_APK_URL}
+              download="ZappApp-v1.0.apk"
             >
               Download the demo <ArrowRight size={17} />
             </a>
@@ -350,8 +350,8 @@ export function ProductSite() {
           <p>Try ZAPP on Android today.</p>
           <a
             className={styles.downloadButton}
-            href={assetPath("/zapp-demo.apk")}
-            download="ZAPP-Demo.apk"
+            href={DEMO_APK_URL}
+            download="ZappApp-v1.0.apk"
           >
             Download the demo <ArrowRight size={17} />
           </a>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Code2, Crown, Sparkles, UserRound, Zap } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
-import { assetPath } from "@/lib/basePath";
+import { DEMO_APK_URL, assetPath } from "@/lib/basePath";
 import styles from "./TeamPage.module.css";
 
 const team = [
@@ -113,7 +113,7 @@ export function TeamPage() {
           <span>Our shared mission</span>
           <h2>Make smart energy planning accessible to every home.</h2>
         </div>
-        <a href={assetPath("/zapp-demo.apk")} download="ZAPP-Demo.apk">
+        <a href={DEMO_APK_URL} download="ZappApp-v1.0.apk">
           Download the demo <ArrowRight size={16} />
         </a>
       </section>
